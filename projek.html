@@ -1,0 +1,234 @@
+ <!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projek Unggulan - Rosma Ibrahim</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-dark': '#1A202C',
+                        'secondary-light': '#F7FAFC',
+                        'accent-start': '#1D4ED8',
+                        'accent-via': '#3B82F6',
+                        'accent-end': '#60A5FA',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'gradient-tr': 'radial-gradient(at 75% 25%, #EFF6FF 0%, #FFFFFF 60%)',
+                        'gradient-tl': 'radial-gradient(at 25% 25%, #EFF6FF 0%, #FFFFFF 60%)',
+                        'gradient-br': 'radial-gradient(at 75% 75%, #EFF6FF 0%, #FFFFFF 60%)',
+                        'gradient-bl': 'radial-gradient(at 25% 75%, #EFF6FF 0%, #FFFFFF 60%)',
+
+                        // Gradien Light yang kita gunakan di tentang-saya.html
+                        'gradient-light-tr': 'radial-gradient(at 75% 25%, #EBF4FF 0%, #F7FAFC 60%)',
+                        'gradient-light-tl': 'radial-gradient(at 25% 25%, #EBF4FF 0%, #F7FAFC 60%)',
+                        'gradient-light-br': 'radial-gradient(at 75% 75%, #EBF4FF 0%, #F7FAFC 60%)',
+                        'gradient-light-bl': 'radial-gradient(at 25% 75%, #EBF4FF 0%, #F7FAFC 60%)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans min-h-screen text-primary-dark antialiased bg-secondary-light">
+
+    <header id="main-header"
+        class="bg-white/90 backdrop-blur-sm shadow-md p-4 fixed top-0 w-full z-50 border-b border-gray-100">
+        <nav class="container mx-auto flex justify-between items-center max-w-7xl">
+            <h1 class="text-2xl font-extrabold tracking-wide text-primary-dark"><a href="index.html">Rosma Ibrahim</a>
+            </h1>
+
+            <ul class="hidden md:flex space-x-6 text-base font-medium">
+                <li><a href="index.html#hero-section"
+                        class="text-gray-600 hover:text-accent-via pb-2 transition duration-200 relative nav-link">Beranda</a>
+                </li>
+                <li><a href="index.html#profil-singkat"
+                        class="text-gray-600 hover:text-accent-via pb-2 transition duration-200 relative nav-link">Tentang
+                        Saya</a></li>
+                <li><a href="index.html#pkl-section"
+                        class="text-gray-600 hover:text-accent-via pb-2 transition duration-200 relative nav-link">PKL</a>
+                </li>
+                <li><a href="#projek-detail"
+                        class="text-primary-dark hover:text-accent-via pb-2 transition duration-200 relative nav-link active">Projek</a>
+                </li>
+                <li><a href="index.html#tools-section"
+                        class="text-gray-600 hover:text-accent-via pb-2 transition duration-200 relative nav-link">Software</a>
+                </li>
+                <li><a href="index.html#contact-section"
+                        class="text-gray-600 hover:text-accent-via pb-2 transition duration-200 relative nav-link">Kontak</a>
+                </li>
+            </ul>
+
+            <button id="menu-button"
+                class="md:hidden p-2 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-accent-via">
+                <svg class="w-7 h-7 text-primary-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <div id="mobile-menu"
+        class="hidden md:hidden bg-white shadow-xl absolute w-full z-30 border-b border-gray-100 top-[72px]">
+        <ul class="flex flex-col p-4 space-y-2">
+            <li><a href="index.html#hero-section"
+                    class="block p-3 text-gray-700 hover:text-accent-via hover:bg-gray-100 rounded-lg">Beranda</a></li>
+            <li><a href="index.html#profil-singkat"
+                    class="block p-3 text-gray-700 hover:text-accent-via hover:bg-gray-100 rounded-lg">Tentang Saya</a>
+            </li>
+            <li><a href="index.html#pkl-section"
+                    class="block p-3 text-gray-700 hover:text-accent-via hover:bg-gray-100 rounded-lg">PKL</a></li>
+            <li><a href="#projek-detail"
+                    class="block p-3 text-primary-dark font-semibold hover:bg-gray-100 rounded-lg">Projek</a></li>
+            <li><a href="index.html#tools-section"
+                    class="block p-3 text-gray-700 hover:text-accent-via hover:bg-gray-100 rounded-lg">Software</a></li>
+            <li><a href="index.html#contact-section"
+                    class="block p-3 text-gray-700 hover:text-accent-via hover:bg-gray-100 rounded-lg">Kontak</a></li>
+        </ul>
+    </div>
+    <main class="relative z-10">
+
+        <section id="projek-detail" class="min-h-screen pt-32 bg-gradient-light-tl"> 
+            <section id="p1" class="scroll-mt-24 min-h-screen">
+                <section id="p2" class="scroll-mt-24 min-h-screen">
+                    <section id="p3" class="scroll-mt-24 min-h-screen">
+
+
+
+            <div class="container mx-auto max-w-7xl p-4 md:p-8">
+
+                <div class="space-y-20">
+
+                    <div id="p1"
+                        class="bg-gradient-light-tr p-8 lg:p-12 rounded-2xl shadow-xl border border-gray-100 reveal-item"
+                        data-delay="0">
+                        <h3 class="text-3xl font-extrabold text-primary-dark mb-4 border-b pb-2">1. Implementasi BGP
+                            (Border Gateway Protocol)</h3>
+                        <div class="mb-6">
+                            <img src="bgp.png" alt="Ilustrasi Topologi BGP"
+                                class="rounded-lg shadow-md w-full max-h-96 object-contain bg-white p-4">
+                            <p class="text-sm text-center text-gray-500 mt-2">Diagram Topologi Lab BGP</p>
+                        </div>
+
+                        <div class="text-gray-700 space-y-4 text-lg">
+                            <p>
+                                BGP, singkatan dari Border Gateway Protocol, adalah protokol perutean untuk internet
+                                yang menentukan jalur terbaik bagi data untuk melakukan perjalanan di antara
+                                jaringan-jaringan yang berbeda (Sistem Otonom). BGP bekerja seperti sistem GPS untuk
+                                internet, yang memungkinkan router untuk bertukar informasi tentang rute yang tersedia
+                                sehingga paket data dapat dikirim secara efisien dari satu jaringan ke jaringan lain,
+                                bahkan melintasi berbagai belahan dunia.
+                            </p>
+                            <h4 class="text-xl font-semibold text-primary-dark mt-6">Tantangan & Solusi</h4>
+                            <ul class="list-disc list-inside space-y-2 ml-4">
+                                <li>Tantangan: Ketidakstabilan Rute (Flapping), rute yang terus-menerus diumumkan dan
+                                    ditarik kembali dapat membebani CPU router.</li>
+                                <li>Solusi: BGP Monitoring, pengawasan real-time untuk mendeteksi anomali atau flapping
+                                    rute secepat mungkin.</li>
+                            </ul>
+                            <h4 class="text-xl font-semibold text-primary-dark mt-6">Tools yang Digunakan</h4>
+                            <p class="font-medium text-accent-via">Cisco IOS, GNS3/EVE-NG, Wireshark (untuk verifikasi).
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div id="p2"
+                        class="bg-gradient-light-bl p-8 lg:p-12 rounded-2xl shadow-xl border border-gray-100 reveal-item"
+                        data-delay="200">
+                        <h3 class="text-3xl font-extrabold text-primary-dark mb-4 border-b pb-2">2. Simulasi Alarm
+                            Kebakaran Otomatis dengan Arduino dan Sensor Asap/Api </h3>
+                        <div class="mb-6">
+                            <img src="projek2.png" alt="Rangkaian Simulasi Alarm Kebakaran Arduino"
+                                class="rounded-lg shadow-md w-full max-h-96 object-contain bg-white p-4">
+                            <p class="text-sm text-center text-gray-500 mt-2">Rancangan pada Arduino</p>
+                        </div>
+
+                        <div class="text-gray-700 space-y-4 text-lg">
+                            <p>
+                                Proyek implementasi sistem sederhana menggunakan Arduino Uno
+                                untuk mendeteksi adanya asap (menggunakan sensor MQ-2) dan/atau nyala api (sensor
+                                Flame). Ketika deteksi terjadi, sistem akan mengaktifkan alarm (buzzer) dan
+                                memberikan notifikasi visual melalui LED.
+                            </p>
+                            <h4 class="text-xl font-semibold text-primary-dark mt-6">Implementasi Utama</h4>
+                            <ul class="list-disc list-inside space-y-2 ml-4">
+                                <li>Pemrograman sketch Arduino untuk membaca input dari sensor digital dan analog.
+                                </li>
+                                <li>Konfigurasi threshold kepekaan sensor MQ-2 untuk meminimalisir false alarm.</li>
+                                <li>Melakukan wiring (pengawatan) yang benar antara sensor, LED, Buzzer, dan Board
+                                    Arduino.</li>
+                                <li>Pengujian sistem alarm dan responsivitas sensor terhadap sumber api/asap simulasi.
+                                </li>
+                            </ul>
+                            <h4 class="text-xl font-semibold text-primary-dark mt-6">Tools & Komponen yang Digunakan
+                            </h4>
+                            <p class="font-medium text-accent-via">Arduino IDE, Arduino Uno, Sensor Asap (MQ-2), Sensor
+                                Api (Flame Sensor), Buzzer Aktif, LED, Resistor.</p>
+                        </div>
+                    </div>
+
+                    <div id="p3"
+                        class="bg-gradient-light-br p-8 lg:p-12 rounded-2xl shadow-xl border border-gray-100 reveal-item"
+                        data-delay="400">
+                        <h3 class="text-3xl font-extrabold text-primary-dark mb-4 border-b pb-2">3. Konfigurasi Firewall
+                            Sederhana</h3>
+                        <div class="mb-6">
+                            <img src="projek3.png" alt="Ilustrasi Konfigurasi Firewall Mikrotik"
+                                class="rounded-lg shadow-md w-full max-h-96 object-contain bg-white p-4">
+                            <p class="text-sm text-center text-gray-500 mt-2">Diagram implementasi Firewall Stateful
+                            </p>
+                        </div>
+
+                        <div class="text-gray-700 space-y-4 text-lg">
+                            <p>
+                                Firewall Stateful pada perangkat Mikrotik untuk mengamankan jaringan internal. Fokus pada pemblokiran trafik masuk (input
+                                chain), pengamanan router itu sendiri, dan penerapan filtering berdasarkan protokol
+                                dan port number.
+                            </p>
+                            <h4 class="text-xl font-semibold text-primary-dark mt-6">Implementasi Utama</h4>
+                            <ul class="list-disc list-inside space-y-2 ml-4">
+                                <li>Konfigurasi Firewall Filter Rules untuk memblokir akses internet ke IP tertentu
+                                    (Forward Chain).</li>
+                                <li>Penerapan rule anti-spoofing dan rule untuk mencegah serangan Brute Force ke
+                                    layanan router (SSH/Winbox).</li>
+                                <li>Mengatur NAT Masquerade dan Port Forwarding yang aman dan terseleksi.</li>
+                            </ul>
+                            <h4 class="text-xl font-semibold text-primary-dark mt-6">Tools yang Digunakan</h4>
+                            <p class="font-medium text-accent-via">MikroTik RouterOS, Winbox, Cisco Packet Tracer
+                                (Simulasi Topologi), Nmap (Pengujian).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-primary-dark text-secondary-light text-center p-8 mt-0">
+        <p class="text-base">&copy; 2025 Rosma Ibrahim.Teknik Informatika.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
