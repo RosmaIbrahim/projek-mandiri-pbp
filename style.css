@@ -1,0 +1,306 @@
+ 
+/* ========================================================= */
+/* 1. GLOBAL & FULL SCREEN LAYOUT */
+/* ========================================================= */
+:root {
+    --navbar-height: 72px;
+}
+
+html {
+    scroll-behavior: smooth; 
+   
+    scroll-padding-top: var(--navbar-height); 
+}
+
+body {
+    transition: background-color 0.3s ease;
+    overflow-x: hidden; 
+}
+
+.full-screen-content {
+    /* Menggunakan variabel agar tingginya dihitung dari 100vh dikurangi tinggi navbar */
+    min-height: calc(100vh - var(--navbar-height)); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+@media (max-width: 768px) {
+    .full-screen-content {
+        min-height: 80vh; 
+    }
+}
+
+/* ========================================================= */
+/* 2. BASE LAYOUT & STYLING */
+/* ========================================================= */
+
+.section-title {
+    font-size: 2.25rem; 
+    line-height: 2.5rem;
+    font-weight: 800;
+    color: #1A202C; 
+    margin-bottom: 2.5rem;
+    
+    border-left: 4px solid transparent; 
+    
+    border-image: linear-gradient(to top, #1D4ED8, #60A5FA) 1; 
+    border-image-slice: 1; 
+    border-style: solid; 
+    
+    padding-left: 1rem;
+}
+.section-title.text-center {
+    border-left: none;
+    border-image: none;
+    padding-left: 0;
+}
+
+
+/* ========================================================= */
+/* 3. GRADIENT  */
+/* ========================================================= */
+
+.gradient-accent-text {
+    background-image: linear-gradient(to right, #1D4ED8, #3B82F6, #60A5FA); 
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.gradient-button {
+    background-image: linear-gradient(to right, #1D4ED8, #3B82F6, #60A5FA);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+    transition: all 0.3s ease;
+}
+.gradient-button:hover {
+    background-image: linear-gradient(to left, #1D4ED8, #3B82F6, #60A5FA);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6); 
+}
+
+.link-styled {
+    color: #3B82F6; 
+    font-weight: 600;
+    transition: all 0.3s ease-out;
+    display: inline-block;
+    margin-top: 1rem;
+}
+.link-styled:hover {
+    color: #1D4ED8; 
+    text-decoration: underline;
+}
+
+/* ============================================================ */
+/* 4. CARD STYLING */
+/* ============================================================ */
+
+.project-card-primary {
+    position: relative;
+    color: white; 
+}
+.project-card-primary h3,
+.project-card-primary p,
+.project-card-primary ul li,
+.project-card-primary .link-styled {
+    color: white !important; 
+}
+
+.project-card-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, #1D4ED8, #60A5FA); 
+    border-radius: 0.75rem; 
+    z-index: -1; 
+}
+
+
+#pkl-section .project-card-clean {
+    background-color: #ffffff;
+    border-radius: 0.75rem; 
+    
+    box-shadow: 
+        0 0 0 4px rgba(29, 77, 216, 0.5), 
+        0 8px 15px -5px rgba(0, 0, 0, 0.1); 
+
+    transition: none; 
+    
+    cursor: default; 
+    overflow: hidden; 
+    
+    position: relative;
+    z-index: 10;
+    border: none; 
+}
+
+
+#pkl-section .project-card-clean:hover,
+#pkl-section .project-card-clean:focus { 
+    transform: none; 
+    box-shadow: 
+        0 0 0 4px rgba(29, 77, 216, 0.5), 
+        0 8px 15px -5px rgba(0, 0, 0, 0.1); 
+}
+
+
+#projek-unggulan .project-card-clean {
+    background-color: #ffffff;
+    border-radius: 0.75rem; 
+    
+    /* Box-Shadow Awal Minimal */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05); 
+    
+    transition: 
+        transform 0.5s cubic-bezier(0.25, 0.8, 0.5, 1), 
+        box-shadow 0.5s cubic-bezier(0.25, 0.8, 0.5, 1);
+    
+ 
+    cursor: pointer; 
+    overflow: hidden; 
+    
+    position: relative;
+    z-index: 10;
+    border: none; 
+}
+
+/* Efek Hover untuk Card Projek Unggulan */
+#projek-unggulan .project-card-clean:hover,
+#projek-unggulan .project-card-clean:focus { 
+    /* Gerakan Timbul ke Atas + ZOOM IN */
+    transform: translateY(-12px) scale(1.01); 
+
+    /* Efek Border Biru Gradien menggunakan Box-Shadow multi-layer */
+    box-shadow: 
+        /* Bayangan Nyata Timbul */
+        0 25px 40px -15px rgba(0, 0, 0, 0.25), 
+        
+        /* Box-Shadow untuk meniru Border Biru Gradien */
+        0 0 0 4px rgba(29, 77, 216, 0.5), /* Border biru 4px */
+        
+        /* Box-Shadow halus lain untuk kesan timbul lebih dalam */
+        0 10px 15px -8px rgba(0, 0, 0, 0.1); 
+}
+
+
+.tool-item-minimal {
+    background-color: #ffffff; 
+    border-radius: 0.75rem; 
+    
+    box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.05); 
+    
+    transition: 
+        transform 0.5s cubic-bezier(0.25, 0.8, 0.5, 1),
+        box-shadow 0.5s cubic-bezier(0.25, 0.8, 0.5, 1);
+    
+    cursor: pointer;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    height: 140px; 
+    width: 140px; 
+    text-align: center;
+    
+    position: relative;
+    z-index: 10;
+    border: none;
+}
+
+.tool-item-minimal:hover,
+.tool-item-minimal:focus { 
+    /* Gerakan Timbul ke Atas + ZOOM IN */
+    transform: translateY(-8px) scale(1.03); 
+    
+    /* Efek Border Biru Gradien menggunakan Box-Shadow multi-layer */
+    box-shadow: 
+        /* Bayangan Nyata Timbul */
+        0 15px 20px -8px rgba(0, 0, 0, 0.2), 
+        
+        /* Box-Shadow untuk meniru Border Biru Gradien */
+        0 0 0 3px rgba(29, 77, 216, 0.5), /* Border biru 3px */
+        
+        /* Box-Shadow halus lain */
+        0 5px 10px -5px rgba(0, 0, 0, 0.1); 
+}
+
+/* Gaya Kontak Minimalis (Garis Bawah Hover) */
+.minimal-contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    
+    /* Transisi Kontak */
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.5, 1); 
+    
+    opacity: 0; 
+    transform: translateY(1rem); 
+
+    border-bottom: 3px solid transparent; 
+}
+.minimal-contact-item:hover,
+.minimal-contact-item:focus { 
+    /* Menerapkan Gradient pada Border Bawah */
+    border-image: linear-gradient(to right, #1D4ED8, #60A5FA) 1; 
+    border-style: solid; 
+    border-bottom-width: 3px;
+    transform: translateY(-2px); 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* ========================================================= */
+/* 5. NAV LINK & SCROLL REVEAL (Tidak Berubah) */
+/* ========================================================= */
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #3B82F6;
+    transition: width 0.3s ease-out;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.hero-item-initial {
+    opacity: 0;
+    transform: translateY(-20px); 
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.hero-item-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-item {
+    opacity: 0; 
+    transform: translateY(20px); 
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+}
+
+.reveal-item.opacity-100 {
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+ 
