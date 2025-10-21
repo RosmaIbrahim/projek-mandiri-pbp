@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Lengkap - Rosma Ibrahim</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css"> 
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-dark': '#1A202C',
+                        'secondary-light': '#F7FAFC',
+                        'accent-start': '#1D4ED8',
+                        'accent-via': '#3B82F6',
+                        'accent-end': '#60A5FA',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'gradient-tr': 'radial-gradient(at 75% 25%, #EFF6FF 0%, #FFFFFF 60%)', 
+                        'gradient-tl': 'radial-gradient(at 25% 25%, #EFF6FF 0%, #FFFFFF 60%)', 
+                        'gradient-br': 'radial-gradient(at 75% 75%, #EFF6FF 0%, #FFFFFF 60%)', 
+                        'gradient-bl': 'radial-gradient(at 25% 75%, #EFF6FF 0%, #FFFFFF 60%)', 
+
+                        'gradient-light-tr': 'radial-gradient(at 75% 25%, #EBF4FF 0%, #F7FAFC 60%)',
+                        'gradient-light-tl': 'radial-gradient(at 25% 25%, #EBF4FF 0%, #F7FAFC 60%)',
+                        'gradient-light-br': 'radial-gradient(at 75% 75%, #EBF4FF 0%, #F7FAFC 60%)',
+                        'gradient-light-bl': 'radial-gradient(at 25% 75%, #EBF4FF 0%, #F7FAFC 60%)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans min-h-screen text-primary-dark antialiased bg-secondary-light"> 
+    
+    <header id="main-header" class="bg-white/90 backdrop-blur-sm shadow-md p-4 fixed top-0 w-full z-50 border-b border-gray-100"> 
+        <nav class="container mx-auto flex justify-between items-center max-w-7xl">
+            <h1 class="text-2xl font-extrabold tracking-wide text-primary-dark"><a href="index.html">Rosma Ibrahim</a></h1>
+            
+            <ul class="hidden md:flex space-x-6 text-base font-medium">
+                <li><a href="index.html#hero-section" class="text-gray-600 hover:text-accent-via pb-2 transition duration-200 relative nav-link">Beranda</a></li>
+                <li><a href="#profil-lengkap" class="text-primary-dark hover:text-accent-via pb-2 transition duration-200 relative nav-link active">Tentang Saya</a></li> 
+                <li><a href="index.html#pkl-section" class="text-gray-600 hover:text-accent-via pb-2 transition duration-200 relative nav-link">PKL</a></li>
+                <li><a href="index.html#projek-unggulan" class="text-gray-600 hover:text-accent-via pb-2 transition duration-200 relative nav-link">Projek</a></li>
+                <li><a href="index.html#tools-section" class="text-gray-600 hover:text-accent-via pb-2 transition duration-200 relative nav-link">Software</a></li>
+                <li><a href="index.html#contact-section" class="text-gray-600 hover:text-accent-via pb-2 transition duration-200 relative nav-link">Kontak</a></li>
+            </ul>
+
+            <button id="menu-button" class="md:hidden p-2 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-accent-via">
+                <svg class="w-7 h-7 text-primary-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </nav>
+    </header>
+    
+    <div class="h-[72px] md:h-[72px]"></div> 
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-xl absolute w-full z-30 border-b border-gray-100 top-[72px]">
+        <ul class="flex flex-col p-4 space-y-2">
+            <li><a href="index.html#hero-section" class="block p-3 text-gray-700 hover:text-accent-via hover:bg-gray-100 rounded-lg">Beranda</a></li>
+            <li><a href="#profil-lengkap" class="block p-3 text-primary-dark font-semibold hover:bg-gray-100 rounded-lg">Tentang Saya</a></li>
+            <li><a href="index.html#pkl-section" class="block p-3 text-gray-700 hover:text-accent-via hover:bg-gray-100 rounded-lg">PKL</a></li>
+            <li><a href="index.html#projek-unggulan" class="block p-3 text-gray-700 hover:text-accent-via hover:bg-gray-100 rounded-lg">Projek</a></li>
+            <li><a href="index.html#tools-section" class="block p-3 text-gray-700 hover:text-accent-via hover:bg-gray-100 rounded-lg">Software</a></li>
+            <li><a href="index.html#contact-section" class="block p-3 text-gray-700 hover:text-accent-via hover:bg-gray-100 rounded-lg">Kontak</a></li>
+        </ul>
+    </div>
+    <main class="relative z-10">
+        <!-- Profil Lengkap Section -->
+        <section id="profil-lengkap" class="full-screen-content bg-gradient-tl shadow-2xl">
+            <div class="container mx-auto max-w-7xl p-4 md:p-8"> 
+                <h2 class="section-title">Profil Lengkap</h2>
+                
+                <div class="bg-white p-8 lg:p-12 rounded-2xl shadow-xl border border-gray-100 reveal-item" data-delay="0">
+                    <div class="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-10">
+                        <div class="flex-shrink-0"> 
+                            <img src="Rosma Ibrahim .jpg" alt="Foto Rosma Ibrahim" 
+                                 class="w-48 h-48 rounded-lg object-cover ring-4 ring-accent-via/50 shadow-xl">
+                        </div>
+
+                        <div class-="flex-grow">
+                            <h3 class="text-3xl lg:text-4xl font-bold text-primary-dark mb-2">Rosma Ibrahim</h3>
+                            <p class="text-accent-via text-xl mb-4 font-medium">Mahasiswa | Teknik Informatika</p> 
+                            
+                             
+                            <p class="text-gray-700 leading-relaxed text-lg mb-4">
+                                Saya memiliki fokus dan minat pada bidang jaringan komputer dan sistem administrasi jaringan. Berpengalaman dalam troubleshooting jaringan dasar dan konfigurasi perangkat keras. Saya bersemangat untuk mengembangkan keahlian dalam manajemen server dan keamanan sistem guna mendukung infrastruktur
+                                teknologi yang efisien.
+                             </p>
+                             
+                        </div>
+                    </div>
+
+                     
+                </div>
+            </div>
+        </section>
+        <!-- Riwayat Pendidikan Section -->
+        <section id="pendidikan-section" class="full-screen-content bg-gradient-light-br">
+            <div class="container mx-auto max-w-7xl p-4 md:p-8">
+                <h2 class="section-title">Riwayat Pendidikan</h2>
+                
+                <div class="space-y-12 max-w-4xl mx-auto">
+
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-accent-via reveal-item" data-delay="0">
+                        <p class="text-sm font-medium text-gray-500">2024 - Sekarang</p>
+                        <h3 class="text-2xl font-bold text-primary-dark mt-1">Teknik Informatika</h3>
+                        <p class="text-lg text-gray-700">Universitas Negeri Surabaya</p>
+                        <ul class="list-disc list-inside text-gray-600 mt-3 space-y-1 text-base">
+                            <li>Fokus Studi: Infrastruktur Jaringan.</li>
+                             
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-gray-400 reveal-item" data-delay="200">
+                        <p class="text-sm font-medium text-gray-500">2021-2024</p>
+                        <h3 class="text-2xl font-bold text-primary-dark mt-1">Teknik Komputer Jaringan dan Telekomunikasi</h3>
+                        <p class="text-lg text-gray-700">SMK Negeri 4 Jakarta</p>
+                        <ul class="list-disc list-inside text-gray-600 mt-3 space-y-1 text-base">
+                            <li>Mempelajari dasar-dasar mengenai jaringan.</li>
+                            <li>Proyek Akhir: Instalasi dan konfigurasi Hotspot MikroTik.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Keahlian Teknis Section -->
+        <section id="keahlian-section" class="full-screen-content bg-gradient-bl">
+            <div class="container mx-auto max-w-7xl p-4 md:p-8">
+                <h2 class="section-title">Keahlian Teknis</h2>
+                
+                <div class="bg-white p-8 lg:p-12 rounded-2xl shadow-xl border border-gray-100 reveal-item" data-delay="0">
+                    
+                    <h3 class="text-xl font-bold text-primary-dark mb-4 border-b pb-2">Jaringan & Sistem Operasi</h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 justify-items-center gap-y-10 gap-x-6">
+
+                        <div class="tool-item-minimal reveal-item" data-delay="0">
+                            <div class="w-20 h-20 flex items-center justify-center bg-gray-100 rounded-full mb-2">
+                                <span class="text-5xl">🐧</span>
+                            </div>
+                            <p class="text-base font-semibold text-primary-dark mt-2">Linux Server</p>
+                        </div>
+                        
+                        <div class="tool-item-minimal reveal-item" data-delay="100">
+                            <div class="w-20 h-20 flex items-center justify-center bg-gray-100 rounded-full mb-2">
+                                <span class="text-4xl">⚙️</span>
+                            </div>
+                            <p class="text-base font-semibold text-primary-dark mt-2">Cisco IOS</p>
+                        </div>
+                        
+                        <div class="tool-item-minimal reveal-item" data-delay="200">
+                            <div class="w-20 h-20 flex items-center justify-center bg-gray-100 rounded-full mb-2">
+                                <span class="text-4xl">📡</span>
+                            </div>
+                            <p class="text-base font-semibold text-primary-dark mt-2">RouterOS</p>
+                        </div>
+                        
+                        <div class="tool-item-minimal reveal-item" data-delay="300">
+                            <div class="w-20 h-20 flex items-center justify-center bg-gray-100 rounded-full mb-2">
+                                <span class="text-4xl">☁️</span>
+                            </div>
+                            <p class="text-base font-semibold text-primary-dark mt-2">Virtualisasi</p>
+                        </div>
+                        
+                         
+
+                    </div>
+                    
+                    <h3 class="text-xl font-bold text-primary-dark mb-4 border-b pt-8 pb-2 mt-10">Sertifikasi & Pelatihan</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Cisco Certified Network Associate (CCNA) - 2025.</li>
+                        <li>Mikrotik Certified Network Associate (MTCNA) - 2023.</li>
+                        <li>Bootcamp Administrasi Server Linux Dasar - 2022.</li>
+                    </ul>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-primary-dark text-secondary-light text-center p-8 mt-0">
+        <p class="text-base">&copy; 2025 Rosma Ibrahim. Teknik Informatika.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
