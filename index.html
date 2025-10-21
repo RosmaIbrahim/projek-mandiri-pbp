@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Rosma Ibrahim</title>
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS konfigurasi -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-dark': '#1A202C',
+                        'secondary-light': '#F7FAFC',
+                        'accent-start': '#1D4ED8',
+                        'accent-via': '#3B82F6',
+                        'accent-end': '#60A5FA',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'gradient-tr': 'radial-gradient(at 75% 25%, #EFF6FF 0%, #FFFFFF 60%)', 
+                        'gradient-tl': 'radial-gradient(at 25% 25%, #EFF6FF 0%, #FFFFFF 60%)', 
+                        'gradient-br': 'radial-gradient(at 75% 75%, #EFF6FF 0%, #FFFFFF 60%)', 
+                        'gradient-bl': 'radial-gradient(at 25% 75%, #EFF6FF 0%, #FFFFFF 60%)', 
+
+                        'gradient-light-tr': 'radial-gradient(at 75% 25%, #EBF4FF 0%, #F7FAFC 60%)',
+                        'gradient-light-tl': 'radial-gradient(at 25% 25%, #EBF4FF 0%, #F7FAFC 60%)',
+                        'gradient-light-br': 'radial-gradient(at 75% 75%, #EBF4FF 0%, #F7FAFC 60%)',
+                        'gradient-light-bl': 'radial-gradient(at 25% 75%, #EBF4FF 0%, #F7FAFC 60%)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="css/style.css"> 
+</head>
+<!-- Body -->
+<body class="font-sans min-h-screen text-primary-dark antialiased bg-secondary-light"> 
+    <!-- Header / Navbar -->
+    <header id="main-header" class="bg-white/90 backdrop-blur-sm shadow-md p-4 fixed top-0 w-full z-50 border-b border-gray-100"> 
+        <nav class="container mx-auto flex justify-between items-center max-w-7xl">
+            <h1 class="text-2xl font-extrabold tracking-wide text-primary-dark">Rosma Ibrahim</h1>
+            <!-- Navigation Links -->
+            <ul class="hidden md:flex space-x-6 text-base font-medium">
+                <li><a href="#hero-section" class="text-primary-dark hover:text-accent-via pb-2 transition duration-200 relative nav-link active">Beranda</a></li>
+                <li><a href="#profil-singkat" class="text-gray-600 hover:text-accent-via pb-2 transition duration-200 relative nav-link">Tentang Saya</a></li> 
+                <li><a href="#pkl-section" class="text-gray-600 hover:text-accent-via pb-2 transition duration-200 relative nav-link">PKL</a></li>
+                <li><a href="#projek-unggulan" class="text-gray-600 hover:text-accent-via pb-2 transition duration-200 relative nav-link">Projek</a></li>
+                <li><a href="#tools-section" class="text-gray-600 hover:text-accent-via pb-2 transition duration-200 relative nav-link">Software</a></li>
+                <li><a href="#contact-section" class="text-gray-600 hover:text-accent-via pb-2 transition duration-200 relative nav-link">Kontak</a></li>
+            </ul>
+            <!-- Mobile Menu Button -->
+            <button id="menu-button" class="md:hidden p-2 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-accent-via">
+                <svg class="w-7 h-7 text-primary-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </nav>
+    </header>
+    
+    <div class="h-[72px] md:h-[72px]"></div> 
+   <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-xl absolute w-full z-30 border-b border-gray-100 top-[72px]">
+        <ul class="flex flex-col p-4 space-y-2">
+            <li><a href="#hero-section" class="block p-3 text-primary-dark font-semibold hover:bg-gray-100 rounded-lg">Beranda</a></li>
+            <li><a href="#profil-singkat" class="block p-3 text-gray-700 hover:text-accent-via hover:bg-gray-100 rounded-lg">Tentang Saya</a></li>
+            <li><a href="#pkl-section" class="block p-3 text-gray-700 hover:text-accent-via hover:bg-gray-100 rounded-lg">PKL</a></li>
+            <li><a href="#projek-unggulan" class="block p-3 text-gray-700 hover:text-accent-via hover:bg-gray-100 rounded-lg">Projek</a></li>
+            <li><a href="#tools-section" class="block p-3 text-gray-700 hover:text-accent-via hover:bg-gray-100 rounded-lg">Software</a></li>
+            <li><a href="#contact-section" class="block p-3 text-gray-700 hover:text-accent-via hover:bg-gray-100 rounded-lg">Kontak</a></li>
+        </ul>
+    </div>
+    <!-- Hero Section -->
+    <section id="hero-section" class="full-screen-content bg-gradient-tr">
+        <div class="container mx-auto max-w-7xl px-4 text-center">
+            
+            <p class="text-xl md:text-2xl text-gray-600 mb-2 hero-item-initial" data-delay="0">
+                Halo, saya
+            </p>
+            
+            <h1 class="text-6xl sm:text-7xl md:text-8xl font-extrabold mb-4 hero-item-initial text-primary-dark" data-delay="100">
+                ROSMA IBRAHIM
+            </h1>
+            
+            <p class="text-2xl md:text-3xl mb-10 max-w-4xl mx-auto text-primary-dark hero-item-initial font-light leading-relaxed" data-delay="300">
+                Seorang Mahasiswa Teknik Informatika yang fokus pada bidang
+                <span class="gradient-accent-text font-semibold">Jaringan Komputer</span>.
+            </p>
+            
+            <a href="#profil-singkat" class="text-white font-semibold px-8 py-3 rounded-xl shadow-lg text-lg inline-flex items-center space-x-2 hero-item-initial gradient-button hover:scale-[1.02] transition duration-300 transform ease-out" data-delay="600">
+                Selengkapnya <span class="ml-2 text-xl">&rarr;</span>
+            </a>
+        </div>
+    </section>
+    
+    <main class="relative z-10">
+        <!-- Profil Singkat Section -->
+        <section id="profil-singkat" class="full-screen-content bg-gradient-tl shadow-2xl">
+            <div class="container mx-auto max-w-7xl p-4 md:p-8"> 
+                <h2 class="section-title">Tentang Saya</h2>
+                
+                <div class="bg-gray-50 p-8 lg:p-12 rounded-2xl shadow-inner border border-gray-100 flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-10 reveal-item" data-delay="0">
+                    
+                    <img src="Rosma Ibrahim .jpg" alt="Foto Rosma Ibrahim" 
+                    class="w-40 h-40 md:w-48 md:h-48 rounded-xl object-cover ring-4 ring-accent-via/50 shadow-xl">
+                    <div class-="flex-grow text-center md:text-left">
+                        <h3 class="text-3xl lg:text-4xl font-bold text-primary-dark mb-2">Rosma Ibrahim</h3>
+                        <p class="text-accent-via text-xl mb-4 font-medium">Mahasiswa | Teknik Informatika</p> 
+                        <p class="text-gray-700 leading-relaxed text-lg">
+                            Saya memiliki fokus dan minat pada bidang jaringan komputer dan sistem administrasi jaringan. Berpengalaman dalam troubleshooting jaringan dasar dan konfigurasi perangkat keras.  
+                         </p>
+                        <a href="tentang-saya.html" class="link-styled mt-6">
+                            Baca Profil Lengkap &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Praktik Kerja Lapangan Section -->
+        <section id="pkl-section" class="full-screen-content bg-gradient-light-br">
+            <div class="container mx-auto max-w-7xl p-4 md:p-8">
+                <h2 class="section-title">Praktik Kerja Lapangan</h2>
+                
+                <div class="grid lg:grid-cols-2 gap-10 mb-16">
+                    
+                    <div class="project-card-clean p-8 reveal-item" data-delay="0">
+                        <h3 class="text-3xl font-bold text-primary-dark mb-1">PT Kawasan Berikat Nusantara (2022)</h3>
+                        <p class="text-accent-via text-lg font-medium mb-4">IT Support</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>Melakukan troubleshooting jaringan</li>
+                            <li>Melakukan miantenance pada hardware maupun software</li>
+                            <li>Membuat laporan harian aset</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-card-clean p-8 reveal-item" data-delay="200">
+                        <h3 class="text-3xl font-bold text-primary-dark mb-1">PT Quantum Nusatama (2023)</h3>
+                        <p class="text-accent-via text-lg font-medium mb-4">Admin Projek</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>Membuat laporan kerja lapangan</li>
+                            <li>Analisis hasil FTTH dan FTTD </li>
+                            <li>Membuat laporan Fiber Optic</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flex justify-center"> 
+                    <div id="pkl-gallery-box" class="bg-white p-6 md:p-10 rounded-2xl shadow-xl border border-gray-100 reveal-item max-w-2xl w-full" data-delay="400">
+                        <h3 class="text-2xl font-bold text-primary-dark mb-6 border-b pb-2">Dokumentasi PKL</h3>
+                        
+                        <div class="relative">
+                            <div id="gallery-container" class="flex overflow-x-hidden space-x-4 scroll-smooth snap-x">
+                                
+                                <div class="flex-shrink-0 w-full snap-start sm:w-1/2">
+                                    <img src="pkl1.png" alt="Momen PKL 1" class="rounded-lg object-cover w-full h-52 md:h-60 shadow-md">
+                                    <p class="text-sm text-center text-gray-500 mt-2">Maintenance Software</p>
+                                </div>
+                                
+                                <div class="flex-shrink-0 w-full snap-start sm:w-1/2">
+                                    <img src="pkl2.jpg" alt="Momen PKL 2" class="rounded-lg object-cover w-full h-52 md:h-60 shadow-md">
+                                    <p class="text-sm text-center text-gray-500 mt-2">Troubleshooting Jaringan</p>
+                                </div>
+
+                                <div class="flex-shrink-0 w-full snap-start sm:w-1/2">
+                                    <img src="pkl3.png" alt="Momen PKL 3" class="rounded-lg object-cover w-full h-52 md:h-60 shadow-md">
+                                    <p class="text-sm text-center text-gray-500 mt-2">Daily report</p>
+                                </div>
+
+                                <div class="flex-shrink-0 w-full snap-start sm:w-1/2">
+                                    <img src="pkl4.jpg" alt="Momen PKL 4" class="rounded-lg object-cover w-full h-52 md:h-60 shadow-md">
+                                    <p class="text-sm text-center text-gray-500 mt-2">Konfigurasi Router</p>
+                                </div>
+
+                                <div class="flex-shrink-0 w-full snap-start sm:w-1/2">
+                                    <img src="pkl5.jpg" alt="Momen PKL 5" class="rounded-lg object-cover w-full h-52 md:h-60 shadow-md">
+                                    <p class="text-sm text-center text-gray-500 mt-2">Crimping LAN</p>
+                                </div>
+                                
+                            </div>
+                            
+                            <button id="prev-btn" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white/70 backdrop-blur p-3 rounded-full shadow-lg hover:bg-white transition duration-200 z-10 opacity-0 pointer-events-none">
+                                <svg class="w-6 h-6 text-primary-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                            </button>
+                            
+                            <button id="next-btn" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white/70 backdrop-blur p-3 rounded-full shadow-lg hover:bg-white transition duration-200 z-10">
+                                <svg class="w-6 h-6 text-primary-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- Projek Section -->
+        <section id="projek-unggulan" class="full-screen-content bg-gradient-bl">
+            <div class="container mx-auto max-w-7xl p-4 md:p-8">
+                <h2 class="section-title">Projek</h2>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <div class="project-card-clean reveal-item" data-delay="0">
+                        <img src="bgp.png" alt="Implementasi BGP" class="rounded-t-xl h-52 w-full object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-primary-dark mb-2">Implementasi BGP</h3>
+                            <p class="text-gray-700 text-base mb-4">Studi kasus konfigurasi Border Gateway Protocol pada jaringan multi-homed.</p>
+                            <a href="projek.html#p1" class="link-styled">Lihat Detail &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card-clean reveal-item" data-delay="150">
+                        <img src="projek2.png" alt="Simulasi Alarm Kebakaran Otomatis" class="rounded-t-xl h-52 w-full object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-primary-dark mb-2">Simulasi Alarm Kebakaran Otomatis dengan Arduino dan Sensor Asap/Api</h3>
+                            <p class="text-gray-700 text-base mb-4">Sistem ini dirancang untuk memantau lingkungan sekitar secara real-time.</p>
+                            <a href="projek.html#p2" class="link-styled">Lihat Detail &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card-clean reveal-item" data-delay="300">
+                        <img src="projek3.png" alt="Otomatisasi Mikrotik" class="rounded-t-xl h-52 w-full object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-primary-dark mb-2">Konfigurasi Firewall Sederhana</h3>
+                            <p class="text-gray-700 text-base mb-4">Membangun dan mengkonfigurasi software firewall.</p>
+                            <a href="projek.html#p3" class="link-styled">Lihat Detail &rarr;</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Tools & Software Section -->
+        <section id="tools-section" class="full-screen-content bg-gradient-light-tr">
+            <div class="container mx-auto max-w-7xl p-4 md:p-8">
+                <h2 class="section-title">Tools & Software </h2>
+                
+                <div class="bg-white p-8 lg:p-12 rounded-2xl shadow-xl border border-gray-100 reveal-item" data-delay="0">
+                    
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 justify-items-center gap-y-10 gap-x-6">
+
+                        <div class="tool-item-minimal reveal-item" data-delay="0">
+                            <img src="cisco.png" alt="Cisco Logo" class="w-20 h-20 object-contain mb-2">
+                            <p class="text-base font-semibold text-primary-dark mt-2">Cisco</p>
+                        </div>
+                        
+                        <div class="tool-item-minimal reveal-item" data-delay="100">
+                            <img src="gns.png" alt="GNS3 Logo" class="w-20 h-20 object-contain mb-2">
+                            <p class="text-base font-semibold text-primary-dark mt-2">GNS3</p>
+                        </div>
+                        
+                        <div class="tool-item-minimal reveal-item" data-delay="200">
+                            <img src="winbox.jpg" alt="Winbox Logo" class="w-20 h-20 object-contain mb-2 rounded-md">
+                            <p class="text-base font-semibold text-primary-dark mt-2">Winbox</p>
+                        </div>
+
+                        <div class="tool-item-minimal reveal-item" data-delay="300">
+                            <img src="vmware.jpg" alt="VMWare Logo" class="w-20 h-20 object-contain mb-2 rounded-md">
+                            <p class="text-base font-semibold text-primary-dark mt-2">VMWare</p>
+                        </div>
+                        
+                        <div class="tool-item-minimal reveal-item" data-delay="400">
+                            <img src="putty.png" alt="Putty Logo" class="w-20 h-20 object-contain mb-2 rounded-md">
+                            <p class="text-base font-semibold text-primary-dark mt-2">Putty</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section id="contact-section" class="full-screen-content bg-gradient-br">
+            <div class="container mx-auto max-w-7xl p-4 md:p-8 text-center">
+                <h2 class="section-title text-center">Hubungi Saya 📞</h2>
+                
+                <p class="text-xl md:text-2xl text-gray-700 mb-10 max-w-3xl mx-auto reveal-item" data-delay="0">
+                    Mari terhubung! Saya senang berdiskusi tentang Jaringan Komputer, proyek, atau peluang kerja.
+                </p>
+
+                <div class="flex flex-wrap justify-center gap-x-12 gap-y-8 mt-8">
+                    
+                    <div class="minimal-contact-item reveal-item" data-delay="100">
+                        <p class="text-lg font-medium text-gray-500">Email</p>
+                        <a href="mailto:rosmaibrahim59@email.com" class="text-2xl md:text-3xl font-semibold text-primary-dark hover:text-accent-via transition duration-200">rosmaibrahim59gmail.com</a>
+                    </div>
+
+                    <div class="minimal-contact-item reveal-item" data-delay="200">
+                        <p class="text-lg font-medium text-gray-500">LinkedIn</p>
+                        <a href="https://www.linkedin.com/in/rosma-ibrahim/" target="_blank" class="text-2xl md:text-3xl font-semibold text-primary-dark hover:text-accent-via transition duration-200">Rosma Ibrahim</a>
+                    </div>
+
+                    <div class="minimal-contact-item reveal-item" data-delay="300">
+                        <p class="text-lg font-medium text-gray-500">WhatsApp</p>
+                        <a href="https://wa.me/6289637574927" target="_blank" class="text-2xl md:text-3xl font-semibold text-primary-dark hover:text-accent-via transition duration-200">+62 896-3757-4927</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-primary-dark text-secondary-light text-center p-8 mt-0">
+        <p class="text-base">&copy; 2025 Rosma Ibrahim.Teknik Informatika.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
